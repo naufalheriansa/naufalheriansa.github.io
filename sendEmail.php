@@ -9,11 +9,11 @@
 
     $email_subject = "Hello Naufal";
 
-    $email_body =   "Name : $name. \n".
-                    "Email : $email. \n".
-                    "Phone : $phone. \n".
-                    "Subject : $subject. \n".
-                    "Message : $iq. \n";
+    $email_body =   $name.
+                    $email.
+                    $phone.
+                    $subject.
+                    $iq ;
 
     $to = "naufalheriansa13@gmail.com";
 
