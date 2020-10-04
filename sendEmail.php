@@ -1,5 +1,5 @@
 <?php 
-use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer;
 
 if(isset($_POST['name']) && isset($_POST['email'])){
     $name = $_POST['name'];
@@ -11,6 +11,8 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     require_once "PHPMailer/PHPMailer.php";
     require_once "PHPMailer/SMTP.php";
     require_once "PHPMailer/Exception.php";
+    require_once "PHPMailer/OAuth.php";
+    require_once "PHPMailer/POP3.php";
 
     $mail = new PHPMailer();
 
