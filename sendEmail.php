@@ -4,12 +4,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 if(isset($_POST['name']) && isset($_POST['email'])){
     $name = $_POST['name'];
     $email = $_POST['email'];
+    $phone = $_POST['phone'];
     $subject = $_POST['subject'];
-    $body = $_POST['body'];
+    $iq = $_POST['iq'];
 
-    require_once "PHPMailer/PHPMailer.php";
-    require_once "PHPMailer/SMTP.php";
-    require_once "PHPMailer/Exception.php";
+    require_once "PHPMailer/src/PHPMailer.php";
+    require_once "PHPMailer/src/SMTP.php";
+    require_once "PHPMailer/src/Exception.php";
 
     $mail = new PHPMailer();
 
@@ -17,15 +18,15 @@ if(isset($_POST['name']) && isset($_POST['email'])){
     $mail->isSMTP();
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
-    $mail->Username = "youremail@gmail.com";
-    $mail->Password = 'yourpassword';
+    $mail->Username = "naufal.14116110@student.itera.ac.id";
+    $mail->Password = 'naufal.14116110';
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
 
     //email settings
     $mail->isHTML(true);
     $mail->setFrom($email, $name);
-    $mail->addAddress("youremail@gmail.com");
+    $mail->addAddress("naufal.14116110@student.itera.ac.id");
     $mail->Subject = ("$email ($subject)");
     $mail->Body = $body;
 
