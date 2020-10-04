@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
             $msgClassk = 'errordiv';
         }else{
             // Pengaturan penerima email dan subjek email
-            $toEmail = 'email@namadomain.com'; // Ganti dengan alamat email yang Anda inginkan
+            $toEmail = 'naufalheriansa123@gmail.com'; // Ganti dengan alamat email yang Anda inginkan
             $emailSubject = 'Pesan website dari '.$name;
             $htmlContent = '<h2> via Form Kontak Website</h2>
                 <h4>Name</h4><p>'.$name.'</p>
@@ -505,7 +505,68 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 
+
 <!-- Contact -->
+<style>
+.mainContent {
+    width: 35%;
+    margin: 2.5em auto;
+    background: #fff;
+    padding: 2.5em;
+}
+.contactFrm h4 {
+    font-size: 1em;
+    color: #252525;
+    margin-bottom: 0.5em;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+.contactFrm input[type="text"], .contactFrm input[type="email"] {
+    width: 70%;
+    outline: none;
+    font-size: 0.9em;
+    padding: .7em 1em;
+    border: 1px solid #000;
+    -webkit-appearance: none;
+    display: block;
+    margin-bottom: 1.2em;
+}
+.contactFrm textarea {
+    resize: none;
+    width: 93.5%;
+    font-size: 0.9em;
+    outline: none;
+    padding: .6em 1em;
+    border: 1px solid #000;
+    min-height: 10em;
+    -webkit-appearance: none;
+}
+.contactFrm input[type="submit"] {
+    outline: none;
+    color: #FFFFFF;
+    padding: 0.5em 0;
+    font-size: 1em;
+    margin: 1em 0 0 0;
+    -webkit-appearance: none;
+    background: #006faa;
+    transition: 0.5s all;
+    border: 2px solid #006faa;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    width: 47%;
+    cursor: pointer;
+}
+.contactFrm input[type="submit"]:hover {
+    background: none;
+    color: #006faa;
+}
+
+p.statusMsg{font-size:18px;}
+p.succdiv{color: #008000;}
+p.errordiv{color:#E80000;}
+</style>
+
 <section class="contact py-5" id="contact">
 	<div class="container py-lg-5">
 		<p class="paragraph">Get in touch with me</p>
@@ -513,35 +574,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="contact-form">
 			<div class="row">
 				<div class="col-lg-8">
-					<form name="contactform" id="contactform" method="post" action="#" onsubmit="return(validate());" novalidate="novalidate">
-						<?php if(!empty($statusMsg)){ ?>
-            			<p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
-       					<?php } ?>
-						<div class="row">
-							<div class="form-group col-md-6 ">
-							  <label>Name</label>
-							  <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
-							</div>
-							<div class="form-group col-md-6">
-							  <label>Email</label>
-							  <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
-							</div>
-							<div class="form-group col-md-6">
-							  <label>Phone No.</label>
-							  <input type="text" class="form-control" id="phone" placeholder="Enter Phone no." name="phone">
-							</div>
-							<div class="form-group col-md-6">
-							  <label>Subject</label>
-							  <input type="text" class="form-control" id="subject" placeholder="Enter Subject" name="phone">
-							</div>
-							<div class="form-group col-12">
-							  <label>Message</label>
-							  <textarea name="issues" class="form-control" id="iq" placeholder="Enter Your Message Here"></textarea>
-							</div>				
-							<button type="submit" class="btn btn-default">Submit </button>
-						</div>
-					</form>
-				</div>
+					<div class="mainContent">
+					    <h2>Kontak Form PHP / <small><a href="http://www.jurnalweb.com">Jurnalweb.com</a></small></h2>
+					    <div class="contactFrm">
+					        <?php if(!empty($statusMsg)){ ?>
+					            <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
+					        <?php } ?>
+					        <form action="" method="post">
+					            <h4>Name</h4>
+					            <input type="text" name="name" placeholder="Nama Anda" required="">
+					            <h4>Email </h4>
+					            <input type="email" name="email" placeholder="email@example.com" required="">
+					            <h4>Subject</h4>
+					            <input type="text" name="subject" placeholder="Tulis subject" required="">
+					            <h4>Message</h4>
+					            <textarea name="message" placeholder="Tulis pesan Anda disini" required=""> </textarea>
+					            <input type="submit" name="submit" value="Submit">
+					            <div class="clear"> </div>
+					        </form>
+					    </div>
+					</div>
 
 				<section class="w3layouts-map col-lg-4 mt-lg-0 mt-5">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2361.993686025006!2d105.28118872405742!3d-5.358228974946152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40c4cfdfdcc0db%3A0xb17556b5d076f842!2sPerum%20Tanjung%20Raya%20Permai!5e0!3m2!1sen!2sin!4v1601581439256!5m2!1sen!2sin" allowfullscreen="" ></iframe>
